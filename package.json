@@ -1,0 +1,23 @@
+{
+  "name": "music-template-html-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangbaovu/music-template-html-css.git"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
+  "author": "hoangbaovu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangbaovu/music-template-html-css/issues"
+  },
+  "homepage": "https://github.com/hoangbaovu/music-template-html-css#readme"
+}
