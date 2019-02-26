@@ -16,10 +16,15 @@ body {
   list-style: none;
 }
 
+.header {
+  margin: 0;
+}
+
 /* Navbar */
 
 .navbar {
   background: #f7f7f7;
+  margin: 0;
 }
 
 .navbar-nav {
@@ -30,7 +35,7 @@ body {
 
 .navbar-brand {
   font-size: 1.6em;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 0;
   color: #65509e;
   text-decoration: none;
 }
@@ -47,7 +52,7 @@ body {
 .nav-link {
   border-bottom: 3px solid transparent;
   color: #92929d;
-  padding: 12px 0;
+  padding: 13px 0;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s;
@@ -76,4 +81,41 @@ body {
 .search__input:focus {
   width: 400px;
   transition: all 0.3s ease-in-out;
+}
+
+/* jumbotron */
+
+.jumbotron {
+  display: flex;
+  background: url("../images/jumbotron.jpg") no-repeat;
+  height: 400px;
+  padding-top: 60px;
+}
+
+.jumbotron .container {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.jumbotron__title {
+  color: #222;
+}
+
+.jumbotron__text {
+  font-size: 1.6em;
+}
+
+.jumbotron__button {
+  background: #65509e;
+  border: 1px solid #92929d;
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.jumbotron__button:hover {
+  background: #47347a;
+  transition: all 0.3s;
 }
