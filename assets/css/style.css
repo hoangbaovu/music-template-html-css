@@ -1,0 +1,79 @@
+/* @import url("https://fonts.googleapis.com/css?family=Roboto&subset=vietnamese"); */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
+/* Navbar */
+
+.navbar {
+  background: #f7f7f7;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.navbar-brand {
+  font-size: 1.6em;
+  padding: 10px 20px;
+  color: #65509e;
+  text-decoration: none;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item:hover .nav-link {
+  border-bottom: 3px solid #65509e;
+  color: #65509e;
+}
+
+.nav-link {
+  border-bottom: 3px solid transparent;
+  color: #92929d;
+  padding: 12px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.nav-item.active .nav-link {
+  border-bottom: 3px solid #65509e;
+  color: #65509e;
+}
+
+.search {
+  margin-left: auto;
+}
+
+.search__input {
+  width: 130px;
+  background: url("../images/common/search_icon.png") no-repeat left;
+  box-sizing: border-box;
+  border: 1px solid #92929d;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 0 5px 25px;
+  margin: 10px 0;
+}
+
+.search__input:focus {
+  width: 400px;
+  transition: all 0.3s ease-in-out;
+}
