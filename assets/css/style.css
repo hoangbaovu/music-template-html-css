@@ -36,6 +36,31 @@ img:hover {
   margin: 0;
 }
 
+/* Button */
+
+.btn {
+  color: #fff;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn-primary {
+  background: #65509e;
+  border: 1px solid #47347a;
+}
+
+.btn-primary:hover {
+  background: #47347a;
+}
+
 /* Navbar */
 
 .navbar {
@@ -122,21 +147,6 @@ img:hover {
   font-size: 1.6em;
   width: 800px;
   text-align: center;
-}
-
-.jumbotron__button {
-  background: #65509e;
-  border: 1px solid #92929d;
-  border-radius: 10px;
-  color: #fff;
-  padding: 20px;
-  text-decoration: none;
-}
-
-.jumbotron__button:hover {
-  background: #47347a;
-  color: #fff;
-  transition: all 0.3s;
 }
 
 /* main */
