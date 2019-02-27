@@ -246,12 +246,24 @@ img:hover {
   opacity: 0;
   z-index: 1;
   transition: all 0.3s;
-}
-
-.overlay-play {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.overlay-bg {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+.overlay--no-opacity {
+  opacity: 1;
+}
+
+.overlay-play {
   font-size: 3em;
   z-index: 2;
 }
@@ -306,6 +318,57 @@ img:hover {
 
 .news-album .card-info {
   padding: 10px 0;
+}
+
+/* section topic */
+
+.topic__img {
+  border-radius: 10px;
+}
+
+.topic .col {
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+  flex: 1;
+}
+
+.topic__item {
+  margin-bottom: 20px;
+}
+
+.topic__item img {
+  transition: all 0.3s;
+}
+
+.topic__item:hover img {
+  transform: scale(1.2);
+}
+
+.topic__item a {
+  color: #fff;
+}
+
+.topic__item .overlay span {
+  font-size: 1.2em;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.topic__item:hover .overlay span {
+  margin-top: 0;
+}
+
+.topic__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.topic__img img {
+  display: block;
+  width: 240px;
+  height: 110px;
 }
 
 /* song */
