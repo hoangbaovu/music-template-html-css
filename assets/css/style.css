@@ -310,9 +310,15 @@ img:hover {
 .news-album__item {
   display: flex;
   flex-direction: column;
-  width: 21%;
+  flex-grow: 1;
+  flex-basis: 20%;
   margin-bottom: 20px;
+  margin-right: 20px;
   position: relative;
+}
+
+.news-album__item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .news-album__item:hover .overlay,

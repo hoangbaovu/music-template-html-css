@@ -77,4 +77,12 @@
   .news .col {
     width: 100%;
   }
+
+  .news-album__item {
+    flex-basis: calc(100% / 3);
+  }
+
+  .news-album__item:nth-child(2n + 2) {
+    margin-right: 0;
+  }
 }
