@@ -53,6 +53,11 @@ img:hover {
   color: #fff;
 }
 
+.btn-sm {
+  font-size: 0.8em;
+  padding: 5px 10px;
+}
+
 .btn-primary {
   background: #65509e;
   border: 1px solid #47347a;
@@ -369,17 +374,17 @@ img:hover {
 
 .topic .col {
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
   flex: 1;
 }
 
 .topic__item {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.topic__item img {
+.topic .topic__item img {
   transition: all 0.3s;
 }
 
@@ -408,19 +413,26 @@ img:hover {
 
 .topic__img img {
   display: block;
-  width: 240px;
+  width: 260px;
   height: 110px;
 }
 
 /* song */
 
 .song {
+  border-radius: 5px;
   display: flex;
   align-items: center;
   margin: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.song:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .song__img {
+  height: 64px;
   position: relative;
   overflow: hidden;
 }
@@ -434,7 +446,6 @@ img:hover {
 .song__more {
   margin-left: auto;
   opacity: 0;
-  transition: all 0.3s ease-in-out;
 }
 
 .song__more a {
