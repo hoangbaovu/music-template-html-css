@@ -46,6 +46,10 @@
 }
 
 @media screen and (max-width: 320px) {
+  .main {
+    padding-top: 30px;
+  }
+
   .container {
     width: 100%;
   }
@@ -111,5 +115,27 @@
 
   .news-album__item:nth-child(2n + 2) {
     margin-right: 0;
+  }
+
+  /* song-page */
+
+  .song-page .news-album__item {
+    margin: 0;
+  }
+
+  .song-page .news-album__item.d-flex-row {
+    flex-direction: column !important;
+  }
+
+  .song-page .news-album__item .card-info {
+    padding: 15px 10px 10px 10px;
+  }
+
+  .song-page .news-album__item > a {
+    align-self: center;
+  }
+
+  .song-page .news-album__img {
+    /* width: 100%; */
   }
 }
