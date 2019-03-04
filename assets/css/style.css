@@ -145,9 +145,11 @@ img:hover {
 /* jumbotron */
 
 .jumbotron {
+  color: #fff;
   display: flex;
-  background: url("../images/jumbotron.jpg") no-repeat;
+  background: url("../images/jumbotron.jpg") center / cover no-repeat;
   height: 400px;
+  position: relative;
 }
 
 .jumbotron .container {
@@ -157,14 +159,12 @@ img:hover {
   justify-content: center;
 }
 
-.jumbotron__title {
-  color: #222;
-}
-
 .jumbotron__text {
-  font-size: 1.6em;
+  font-size: 1.2em;
+  line-height: 1.5;
   width: 800px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 /* main */
