@@ -447,6 +447,23 @@ img:hover {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+.song__count {
+  position: relative;
+  width: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.song__count span {
+  position: absolute;
+  left: 10px;
+}
+
+.song__count span::before {
+  counter-increment: section;
+  content: counter(section);
+}
+
 .song__img {
   height: 64px;
   position: relative;
@@ -668,8 +685,20 @@ img:hover {
   margin-bottom: 20px;
 }
 
+.song-page .news-album__item {
+  margin-bottom: 0;
+}
+
 /* song-lyrics */
 
 .song-lyrics-text {
   font: 1em/2 sans-serif;
+}
+
+/******
+  top 100 page
+*****************/
+
+.top100 {
+  counter-reset: section;
 }
