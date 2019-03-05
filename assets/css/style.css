@@ -132,7 +132,7 @@ img:hover {
   box-sizing: border-box;
   border: 1px solid #92929d;
   border-radius: 10px;
-  outline: none;
+  outline: 0;
   padding: 5px 0 5px 25px;
   margin: 10px 0;
 }
@@ -308,11 +308,7 @@ img:hover {
 }
 
 .overlay-bg {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.8)
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
 
 .overlay--no-opacity {
@@ -660,7 +656,6 @@ img:hover {
 /* Song Page */
 
 .song-page {
-  flex-flow: 1;
   flex-basis: 100%;
 }
 
