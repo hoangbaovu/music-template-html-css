@@ -5,6 +5,7 @@
 
   .container {
     width: 100%;
+    padding: 0;
   }
 
   .navbar .navbar-brand {
@@ -57,6 +58,10 @@
   }
 
   /* song */
+
+  .song--large {
+    flex-direction: column;
+  }
 
   .song__more {
     display: none;
