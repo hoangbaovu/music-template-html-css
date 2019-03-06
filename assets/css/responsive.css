@@ -1,4 +1,52 @@
-@media screen and (max-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .navbar-brand {
+    padding-left: 10px;
+  }
+
+  .search__input:focus {
+    width: 250px;
+  }
+
+  .jumbotron {
+    height: 250px;
+  }
+
+  .jumbotron__title {
+    font-size: 1.3em;
+  }
+
+  .jumbotron__text {
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  /* sidebar */
+
+  .sidebar {
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar .widget {
+    padding: 0 10px;
+  }
+
+  .main .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 320px) and (max-width: 375px) and (max-width: 480px) {
   .main {
     padding-top: 30px;
   }
@@ -8,7 +56,7 @@
     padding: 0;
   }
 
-  .navbar .navbar-brand {
+  .navbar-brand {
     padding: 10px 0 0;
     text-align: center;
   }
@@ -43,6 +91,14 @@
   }
 
   .news .col {
+    width: 100%;
+  }
+
+  .jumbotron {
+    padding: 0 15px;
+  }
+
+  .jumbotron__text {
     width: 100%;
   }
 
@@ -91,5 +147,23 @@
 
   .song-page .news-album__item > a {
     align-self: center;
+  }
+
+  .song:nth-child(1) .song__count,
+  .song:nth-child(2) .song__count,
+  .song:nth-child(3) .song__count {
+    align-self: flex-start;
+  }
+
+  .footer {
+    padding: 0 10px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+  }
+
+  .footer__top li {
+    margin-bottom: 10px;
   }
 }
