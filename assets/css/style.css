@@ -429,7 +429,9 @@ img:hover {
   height: 110px;
 }
 
-/* song */
+/*****
+  song
+********************/
 
 .song {
   border-radius: 5px;
@@ -443,25 +445,63 @@ img:hover {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+.song--large .song__img {
+  height: 164px;
+}
+
+.song--large .song__img img {
+  border-radius: 5px;
+  height: 164px;
+  width: 164px;
+}
+
+.song--large .card-info__title {
+  font-size: 2em;
+}
+
 .song__count {
   position: relative;
-  width: 30px;
+  width: 50px;
   display: flex;
   align-items: center;
 }
 
 .song__count span {
   position: absolute;
-  left: 10px;
+  left: 15px;
 }
 
 .song__count span::before {
   counter-increment: section;
   content: counter(section);
+  font: 600 1.2em/1.5 Roboto;
+}
+
+.song:nth-child(1) .song__count span::after,
+.song:nth-child(2) .song__count span::after,
+.song:nth-child(3) .song__count span::after {
+  content: "TOP";
+  font-size: 12px;
+  left: -5px;
+  top: 27px;
+  position: absolute;
+}
+
+.song:nth-child(1) .song__count span::before {
+  color: rgb(233, 15, 15);
+}
+
+.song:nth-child(2) .song__count span::before {
+  color: rgb(14, 233, 61);
+}
+
+.song:nth-child(3) .song__count span::before {
+  color: rgb(40, 18, 238);
 }
 
 .song__img {
   height: 64px;
+  padding: 7px 0 7px 7px;
   position: relative;
   overflow: hidden;
 }
@@ -696,4 +736,8 @@ img:hover {
 
 .top100 {
   counter-reset: section;
+}
+
+.top100 .col {
+  flex-grow: 1;
 }
