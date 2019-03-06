@@ -16,6 +16,10 @@ a:hover {
   transition: all 0.3s;
 }
 
+img {
+  vertical-align: middle;
+}
+
 img:hover {
   opacity: 0.8;
   transition: all 0.3s;
