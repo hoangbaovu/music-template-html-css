@@ -49,6 +49,29 @@
 
 // index
 
+// news-song
+
+.news-song {
+  &__left,
+  &__right {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+  }
+
+  &__left {
+    @include media-breakpoint-up(md) {
+      border-right: 1px solid $gray-400;
+    }
+  }
+}
+
 // news-album
 
 .news-album {
