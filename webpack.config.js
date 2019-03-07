@@ -26,6 +26,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
+      filename: "index.html",
       template: path.join(__dirname, "views", "index.pug")
     })
   ],
