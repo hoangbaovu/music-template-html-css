@@ -13,14 +13,18 @@
   border-bottom: 3px solid transparent;
 
   &:hover {
-    border-bottom: 3px solid #65509e;
-    color: #65509e;
+    border-bottom: 3px solid $primary;
+    color: $primary;
     @include transition(all, 0.3s, ease-in-out);
   }
 
   &.active {
-    border-bottom: 3px solid #65509e;
-    color: #65509e;
+    border-bottom: 3px solid $primary;
+    color: $primary;
+
+    .nav-link {
+      color: $primary;
+    }
   }
 }
 
