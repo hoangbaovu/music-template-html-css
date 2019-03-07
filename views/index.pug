@@ -3,5 +3,15 @@ extends ./layouts/layouts.pug
 block title
   | Trang Chủ - Music
 
+block append jumbotron
+  include components/_jumbotron.pug
+
 block content
-  h2 Home
+  section.news-song
+    .m-header
+      h2.m-header__title
+        a(href="#") Bài hát mới
+      .m-header__viewmore
+        a.btn.btn-sm.btn-primary
+          i.far.fa-play-circle
+          | Nghe tất cả

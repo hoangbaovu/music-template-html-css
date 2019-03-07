@@ -42,6 +42,11 @@ module.exports = {
         }
       },
 
+      {
+        test: /\.(woff|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+        loader: "url-loader?limit=100000"
+      },
+
       // Pug
 
       {
