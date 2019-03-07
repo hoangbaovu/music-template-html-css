@@ -1,8 +1,8 @@
-mixin song(name="Song Name", singer="Singer Name", assets="99156")
+mixin song(assets="music" ,imgid="99156", name="Song Name", singer="Singer Name")
   .song
     .song__img
       a(href='song.html')
-        img(src=`./assets/images/music/${assets}.jpg`, alt='')
+        img(src=`./assets/images/${assets}/${imgid}.jpg`, alt='')
     .song-info
       h4.song-info__title
         a(href='song.html')=name
