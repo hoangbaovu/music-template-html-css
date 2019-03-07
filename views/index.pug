@@ -1,4 +1,5 @@
 extends ./layouts/layouts.pug
+include ./mixin/_components/_song.pug
 
 block title
   | Trang Chủ - Music
@@ -8,6 +9,27 @@ block append jumbotron
 
 block content
   section.news-song
+    .m-header
+      h2.m-header__title
+        a(href="#") Bài hát mới
+      .m-header__viewmore
+        a.btn.btn-sm.btn-primary
+          i.far.fa-play-circle
+          | Nghe tất cả
+    .row
+      .col-md-6
+        +song("Anh là ai", "Phương Ly", "99156")
+        +song("Forthenite", "D-block & S-te-fan", "101029")
+        +song("Done For Me", "Charlie Puth", "85553")
+        +song("Skyfall", "Adele", "26070")
+        +song("Victory", "Two Steps From Hell", "40321")
+      .col-md-6
+        +song("Nơi mình dừng chân", "Mỹ Tâm", "99800")
+        +song("Like A Snowflower", "Punch", "99388")
+        +song("Kataware Toki (かたわれ時)", "RADWIMPS", "68088")
+        +song("Polaris (ポラリス)", "Aimer", "71318")
+        +song("Ex's Hate Me", "B Ray", "100672")
+  section.news-album
     .m-header
       h2.m-header__title
         a(href="#") Bài hát mới
