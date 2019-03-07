@@ -1,0 +1,27 @@
+doctype 5
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="/assets/styles/styles.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=vietnamese")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css")
+
+
+    title
+      block title
+  body
+    include ../components/_header.pug
+
+    main.main
+      .container
+        .row
+          .col-md-9
+            block content
+          .col-md-3
+            aside.sidebar
+
+    script(src="/assets/scripts/jquery-3.3.1.slim.min.js")
+    script(src="/assets/scripts/popper.min.js")
+    script(src="/assets/scripts/bootstrap.min.js")

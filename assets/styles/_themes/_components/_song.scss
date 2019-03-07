@@ -1,0 +1,154 @@
+// song
+
+.song-info {
+  padding: 0 0 0 15px;
+
+  %song-info {
+    color: #a0a0a0;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+
+  &__album {
+    @extend %song-info;
+  }
+
+  &__authors {
+    @extend %song-info;
+  }
+
+  &__category {
+    @extend %song-info;
+  }
+
+  &__title {
+    font: 700 1em/1 "Roboto";
+    margin-bottom: 10px;
+  }
+
+  &__sub-title {
+    font-size: 0.8em;
+    margin: 0;
+  }
+}
+
+.song-info--medium {
+  &__title {
+    font-size: 2em;
+  }
+
+  &__sub-title {
+    font-size: 1em;
+  }
+}
+
+.song-info__album a,
+.song-info__authors a,
+.song-info__category a {
+  color: #5c4e4e;
+}
+
+.song-info__album a:hover,
+.song-info__authors a:hover,
+.song-info__category a:hover {
+  color: #65509e;
+}
+
+.song-info--song-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.song {
+  border-radius: 5px;
+  align-items: center;
+  margin: 10px 0;
+  @extend .d-flex;
+  @include transition(all, 0.3s, ease-in-out);
+
+  &__count {
+    position: relative;
+    width: 50px;
+    display: flex;
+    align-items: center;
+
+    span {
+      position: absolute;
+      left: 15px;
+
+      &::before {
+        counter-increment: section;
+        content: counter(section);
+        font: 600 1.2em/1.5 Roboto;
+      }
+    }
+  }
+
+  &__img {
+    padding: 7px 0 7px 7px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      border-radius: 5px;
+      height: 64px;
+      width: 64px;
+    }
+  }
+
+  &__more {
+    margin-left: auto;
+    opacity: 0;
+    @include transition(all, 0.3s, ease-in-out);
+
+    a {
+      margin-right: 10px;
+    }
+
+    i {
+      font-size: 1.3em;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    @include transition(all, 0.3s, ease-in-out);
+
+    .song__more {
+      opacity: 1;
+    }
+  }
+}
+
+.song--large .song__img img {
+  border-radius: 5px;
+  height: 164px;
+  width: 164px;
+}
+
+.song--large .song-info__title {
+  font-size: 2em;
+}
+
+.song:nth-child(1) .song__count span::after,
+.song:nth-child(2) .song__count span::after,
+.song:nth-child(3) .song__count span::after {
+  content: "TOP";
+  font-size: 12px;
+  left: -5px;
+  top: 27px;
+  position: absolute;
+}
+
+.song:nth-child(1) .song__count span::before {
+  color: rgb(233, 15, 15);
+}
+
+.song:nth-child(2) .song__count span::before {
+  color: rgb(14, 233, 61);
+}
+
+.song:nth-child(3) .song__count span::before {
+  color: rgb(40, 18, 238);
+}

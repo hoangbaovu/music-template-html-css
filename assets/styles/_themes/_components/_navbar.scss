@@ -1,0 +1,34 @@
+.navbar {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+}
+
+.nav-link {
+  color: $black;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  padding: 0 0.5rem;
+  border-bottom: 3px solid transparent;
+
+  &:hover {
+    border-bottom: 3px solid $primary;
+    color: $primary;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+
+  &.active {
+    border-bottom: 3px solid $primary;
+    color: $primary;
+
+    .nav-link {
+      color: $primary;
+    }
+  }
+}
+
+.navbar-brand {
+  color: $primary;
+  font-size: 1.6em;
+}

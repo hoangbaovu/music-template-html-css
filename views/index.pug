@@ -1,0 +1,49 @@
+extends ./layouts/layouts.pug
+include ./mixin/_components/_song.pug
+include ./mixin/_components/_song-cover.pug
+
+block title
+  | Trang Chủ - Music
+
+block append jumbotron
+  include components/_jumbotron.pug
+
+block content
+  section.news-song
+    .m-header
+      h2.m-header__title
+        a(href="#") Bài hát mới
+      .m-header__viewmore
+        a.btn.btn-sm.btn-primary(href="#")
+          i.far.fa-play-circle
+          | Nghe tất cả
+    .row
+      .news-song__left
+        +song("music", "99156", "Anh là ai", "Phương Ly")
+        +song("music", "101029", "Forthenite", "D-block & S-te-fan")
+        +song("music", "85553", "Done For Me", "Charlie Puth")
+        +song("music", "26070", "Skyfall", "Adele")
+        +song("music", "40321", "Victory", "Two Steps From Hell")
+      .news-song__right
+        +song("music", "99800", "Nơi mình dừng chân", "Mỹ Tâm")
+        +song("music", "99388", "Like A Snowflower", "Punch")
+        +song("music", "68088", "Kataware Toki (かたわれ時)", "RADWIMPS")
+        +song("music", "71318", "Polaris (ポラリス)", "Aimer")
+        +song("music", "100672", "Ex's Hate Me", "B Ray")
+  section.news-album
+    .m-header
+      h2.m-header__title
+        a(href="#") Album mới
+      .m-header__viewmore
+        a.btn.btn-sm.btn-primary(href="#")
+          i.far.fa-play-circle
+          | Xem thêm
+    .row
+      +song-cover("album", "101024", "The Growing Leaf", "Mons Lvnae")
+      +song-cover("album", "101025", "In The End (Single)", "Tommee Profitt")
+      +song-cover("album", "101034", "(Reverse) (2019)", "Hồ Mộng Châu (胡梦周)")
+      +song-cover("album", "100959", "Thói Quen (习惯) (2019)", "Hạ Uyển An(夏婉安)")
+      +song-cover("album", "101024", "The Growing Leaf", "Mons Lvnae")
+      +song-cover("album", "100959", "Thói Quen (习惯) (2019)", "Hạ Uyển An(夏婉安)")
+      +song-cover("album", "101024", "The Growing Leaf", "Mons Lvnae")
+      +song-cover("album", "101025", "In The End (Single)", "Tommee Profitt")
