@@ -2,6 +2,11 @@ body {
   @extend .pt-5;
 }
 
+img:hover {
+  opacity: 0.8;
+  @include transition(opacity, 0.3s, ease-in-out);
+}
+
 // m-header
 
 .m-header {
@@ -66,12 +71,6 @@ body {
 
     @include media-breakpoint-up(lg) {
       @include make-col(6);
-    }
-  }
-
-  &__left {
-    @include media-breakpoint-up(md) {
-      border-right: 1px solid $gray-400;
     }
   }
 }
