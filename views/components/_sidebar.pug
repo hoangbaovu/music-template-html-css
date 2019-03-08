@@ -1,11 +1,31 @@
+-
+  var
+    tagcloud = [
+      {
+        name: 'Acoustic',
+        link: 'tag/acoustic.html'
+      },
+      {
+        name: 'Hip-Hop/Rap',
+        link: '#'
+      },
+      {
+        name: 'Pop',
+        link: '#'
+      },
+      {
+        name: 'Classical',
+        link: '#'
+      },
+    ]
+
 aside.sidebar
   .widget
     +header-title("Thể loại phổ biến")
     .widget-tagcloud
-      +tagcloud("Acoustic")
-      +tagcloud("Hip-Hop/Rap")
-      +tagcloud("Pop")
-      +tagcloud("Classical")
+      //- Iterations tagcloud
+      each data in tagcloud
+        +tagcloud(data)
   .widget
     +header-title("Bài hát nổi bật")
     .row

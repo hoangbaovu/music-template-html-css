@@ -4,7 +4,6 @@ mixin header-title(name="Header Name", link="#")
     h2.m-header__title
       a(href=link)=name
 
-
 //- Song
 mixin song(assets="music" ,imgid="99156", name="Song Name", singer="Singer Name")
   .song
@@ -62,8 +61,8 @@ mixin m-topic-item(imgid="love", topic="Topic name")
 
 
 //- tag cloud
-mixin tagcloud(name="Tag name", href="#")
-  a.widget-tagcloud__link(href=href)=name
+mixin tagcloud(data)
+  a.widget-tagcloud__link(href= data.link) #{data.name}
 
 //- widget-singer
 mixin widget-singer(imgid="48", singer="Singer Name")
