@@ -1,10 +1,14 @@
+body {
+  @extend .pt-5;
+}
+
 // m-header
 
 .m-header {
-  display: flex;
+  @extend .d-flex;
 
   &__viewmore {
-    margin-left: auto;
+    @extend .ml-auto;
 
     i {
       margin-right: ($spacer * 0.25);
@@ -81,11 +85,11 @@
     @include make-col-ready();
 
     @include media-breakpoint-up(xs) {
-      @include make-col(12);
+      @include make-col(6);
     }
 
     @include media-breakpoint-up(sm) {
-      @include make-col(6);
+      @include make-col(4);
     }
 
     @include media-breakpoint-up(md) {

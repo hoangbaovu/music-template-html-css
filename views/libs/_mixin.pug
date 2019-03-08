@@ -1,0 +1,70 @@
+//- header-title
+mixin header-title(name="Header Name", link="#")
+  .m-header
+    h2.m-header__title
+      a(href=link)=name
+
+//- Song
+mixin song(assets="music" ,imgid="99156", name="Song Name", singer="Singer Name")
+  .song
+    .song__img
+      a(href='song.html')
+        img(src=`./assets/images/${assets}/${imgid}.jpg`, alt='')
+    .song-info
+      h4.song-info__title
+        a(href='song.html')=name
+      p.song-info__sub-title
+        a(href='#')=singer
+    .song__more
+      a(href='/song.html')
+        i.far.fa-play-circle
+      a(href='#')
+        i.fas.fa-cloud-download-alt
+      a(href='#')
+        i.fas.fa-share-alt
+
+mixin song-widget(assets="music" ,imgid="99156", name="Song Name", singer="Singer Name")
+  .song(class!=attributes.class).song--widget.song--no-hover
+    .song__img
+      a(href='song.html')
+        img(src=`./assets/images/${assets}/${imgid}.jpg`, alt='')
+    .song-info
+      h4.song-info__title
+        a(href='song.html')=name
+      p.song-info__sub-title
+        a(href='#')=singer
+
+//- song-cover
+mixin song-cover(assets="album", imgid="101024", name="Song name", singer="Singer name")
+  .song-cover
+    a(href='#')
+      .song-cover__img
+        img(src=`assets/images/${assets}/${imgid}.jpg`, alt='')
+        .overlay
+          .overlay-play
+            i.far.fa-play-circle
+    .song-info
+      h4.song-info__title
+        a(href='#')=name
+      p.song-info__sub-title
+        a(href='#')=singer
+
+//- topics
+
+mixin m-topic-item(imgid="love", topic="Topic name")
+  .m-topic-item
+    a(href='#')
+      .m-topic-item__img
+        img(src=`assets/images/topics/${imgid}.jpg`, alt='')
+        .overlay.overlay-bg.overlay--no-opacity
+          span=topic
+
+
+//- tag cloud
+mixin tagcloud(data)
+  a.widget-tagcloud__link(href= data.link) #{data.name}
+
+//- widget-singer
+mixin widget-singer(imgid="48", singer="Singer Name")
+  a.widget-singer__item(href='#', style=`background-image: url(./assets/images/singer/${imgid}.jpg)`)&attributes(attributes)
+    span=singer

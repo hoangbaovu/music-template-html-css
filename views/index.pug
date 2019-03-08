@@ -1,6 +1,4 @@
 extends ./layouts/layouts.pug
-include ./mixin/_components/_song.pug
-include ./mixin/_components/_song-cover.pug
 
 block title
   | Trang Chủ - Music
@@ -10,9 +8,7 @@ block append jumbotron
 
 block content
   section.news-song
-    .m-header
-      h2.m-header__title
-        a(href="#") Bài hát mới
+    +header-title("Bài hát mới")
       .m-header__viewmore
         a.btn.btn-sm.btn-primary(href="#")
           i.far.fa-play-circle
@@ -31,9 +27,7 @@ block content
         +song("music", "71318", "Polaris (ポラリス)", "Aimer")
         +song("music", "100672", "Ex's Hate Me", "B Ray")
   section.news-album
-    .m-header
-      h2.m-header__title
-        a(href="#") Album mới
+    +header-title("Album mới")
       .m-header__viewmore
         a.btn.btn-sm.btn-primary(href="#")
           i.far.fa-play-circle
@@ -47,3 +41,17 @@ block content
       +song-cover("album", "100959", "Thói Quen (习惯) (2019)", "Hạ Uyển An(夏婉安)")
       +song-cover("album", "101024", "The Growing Leaf", "Mons Lvnae")
       +song-cover("album", "101025", "In The End (Single)", "Tommee Profitt")
+  section.m-topic
+    +header-title("Chủ đề nổi bật")
+      .m-header__viewmore
+        a.btn.btn-sm.btn-primary(href="#")
+          i.far.fa-play-circle
+          | Xem thêm
+    .row
+      +m-topic-item("love", "Tình Yêu")
+      +m-topic-item("nhac-tre", "Nhạc Trẻ")
+      +m-topic-item("hit-song", "Những Bài Hit")
+      +m-topic-item("nhac-viet-bat-hu", "Nhạc Âu-Mỹ")
+      +m-topic-item("dance", "Nhạc Dance")
+      +m-topic-item("today", "Hôm nay nghe gì?")
+
