@@ -60,6 +60,11 @@ mixin m-topic-item(imgid="love", topic="Topic name")
         .overlay.overlay-bg.overlay--no-opacity
           span=topic
 
+
+//- tag cloud
+mixin tagcloud(name="Tag name", href="#")
+  a.widget-tagcloud__link(href=href)=name
+
 //- widget-singer
 mixin widget-singer(imgid="48", singer="Singer Name")
   a.widget-singer__item(href='#', style=`background-image: url(./assets/images/singer/${imgid}.jpg)`)&attributes(attributes)

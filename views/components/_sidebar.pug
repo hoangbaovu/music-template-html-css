@@ -2,11 +2,10 @@ aside.sidebar
   .widget
     +header-title("Thể loại phổ biến")
     .widget-tagcloud
-      a.widget-tagcloud__link(href='#') Acoustic
-      a.widget-tagcloud__link(href='#') Hip-Hop/Rap
-      a.widget-tagcloud__link(href='#') Pop
-      a.widget-tagcloud__link(href='#') R&B
-      a.widget-tagcloud__link(href='#') Classical
+      +tagcloud("Acoustic")
+      +tagcloud("Hip-Hop/Rap")
+      +tagcloud("Pop")
+      +tagcloud("Classical")
   .widget
     +header-title("Bài hát nổi bật")
     .row
