@@ -51,13 +51,13 @@ mixin song-cover(assets="album", imgid="101024", name="Song name", singer="Singe
 
 //- topics
 
-mixin m-topic-item(imgid="love", topic="Topic name")
-  .m-topic-item
-    a(href='#')
-      .m-topic-item__img
-        img(src=`assets/images/topics/${imgid}.jpg`, alt='')
+mixin topics(data)
+  .topics
+    a(href= data.link)
+      .topics__img
+        img(src=`assets/images/topics/${data.imgid}.jpg`, alt='')
         .overlay.overlay-bg.overlay--no-opacity
-          span=topic
+          span #{data.name}
 
 //- tag cloud
 mixin tagcloud(data)

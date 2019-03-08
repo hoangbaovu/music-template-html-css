@@ -48,10 +48,7 @@ block content
           i.far.fa-play-circle
           | Xem thêm
     .row
-      +m-topic-item("love", "Tình Yêu")
-      +m-topic-item("nhac-tre", "Nhạc Trẻ")
-      +m-topic-item("hit-song", "Những Bài Hit")
-      +m-topic-item("nhac-viet-bat-hu", "Nhạc Âu-Mỹ")
-      +m-topic-item("dance", "Nhạc Dance")
-      +m-topic-item("today", "Hôm nay nghe gì?")
+      //- Iteration topics
+      each data in topics
+        +topics(data)
 
