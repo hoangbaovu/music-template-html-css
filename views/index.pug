@@ -15,17 +15,14 @@ block content
           | Nghe tất cả
     .row
       .news-song__left
-        +song("music", "99156", "Anh là ai", "Phương Ly")
-        +song("music", "101029", "Forthenite", "D-block & S-te-fan")
-        +song("music", "85553", "Done For Me", "Charlie Puth")
-        +song("music", "26070", "Skyfall", "Adele")
-        +song("music", "40321", "Victory", "Two Steps From Hell")
+        //- Iteration song
+        - for (var i = 0; i < 5; i++) {
+          +song(songs[i])
+        - }
       .news-song__right
-        +song("music", "99800", "Nơi mình dừng chân", "Mỹ Tâm")
-        +song("music", "99388", "Like A Snowflower", "Punch")
-        +song("music", "68088", "Kataware Toki (かたわれ時)", "RADWIMPS")
-        +song("music", "71318", "Polaris (ポラリス)", "Aimer")
-        +song("music", "100672", "Ex's Hate Me", "B Ray")
+        - for (var i = 5; i < 10; i++) {
+          +song(songs[i])
+        - }
   section.news-album
     +header-title("Album mới")
       .m-header__viewmore
