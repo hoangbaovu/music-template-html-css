@@ -49,6 +49,8 @@ block content
           | Xem thêm
     .row
       //- Iteration topics
-      each data in topics
-        +topics(data)
-
+      //- each data in topics
+      //-   +topics(data)
+      - for (var i = 0; i < topics.length; i++) {
+          +topics(topics[i])
+      - }
