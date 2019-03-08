@@ -1,10 +1,14 @@
+body {
+  @extend .pt-5;
+}
+
 // m-header
 
 .m-header {
-  display: flex;
+  @extend .d-flex;
 
   &__viewmore {
-    margin-left: auto;
+    @extend .ml-auto;
 
     i {
       margin-right: ($spacer * 0.25);
@@ -81,60 +85,15 @@
     @include make-col-ready();
 
     @include media-breakpoint-up(xs) {
-      @include make-col(12);
+      @include make-col(6);
     }
 
     @include media-breakpoint-up(sm) {
-      @include make-col(6);
+      @include make-col(4);
     }
 
     @include media-breakpoint-up(md) {
       @include make-col(3);
-    }
-  }
-}
-
-// m-topic
-
-.m-topic-item {
-  position: relative;
-  margin-bottom: 20px;
-  @include make-col-ready();
-
-  @include media-breakpoint-up(md) {
-    @include make-col(4);
-  }
-
-  &:hover {
-    img {
-      transform: scale(1.2);
-    }
-
-    span {
-      transform: translateY(-10px);
-    }
-  }
-
-  a {
-    color: $white;
-    font-size: 1.2em;
-  }
-
-  span {
-    margin-top: 20px;
-    @include transition(all, 0.4s, ease-in-out);
-  }
-
-  &__img {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-
-    img {
-      display: block;
-      width: 260px;
-      height: 110px;
-      @include transition(all, 0.3s, ease-in-out);
     }
   }
 }

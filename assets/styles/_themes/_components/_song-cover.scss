@@ -4,6 +4,7 @@
   @include transition(all, 0.3s, ease-in-out);
 
   &__img {
+    border-radius: 5px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
