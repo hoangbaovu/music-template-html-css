@@ -1,8 +1,6 @@
 aside.sidebar
   .widget
-    .m-header
-      h2.m-header__title
-        a(href="#") Thể loại phổ biến
+    +header-title("Thể loại phổ biến")
     .widget-tagcloud
       a.widget-tagcloud__link(href='#') Acoustic
       a.widget-tagcloud__link(href='#') Hip-Hop/Rap
@@ -10,9 +8,7 @@ aside.sidebar
       a.widget-tagcloud__link(href='#') R&B
       a.widget-tagcloud__link(href='#') Classical
   .widget
-    .m-header
-      h2.m-header__title
-        a(href="#") Bài hát nổi bật
+    +header-title("Bài hát nổi bật")
     .row
       +song-widget("music", "99156", "Anh là ai", "Phương Ly")
       +song-widget("music", "101029", "Forthenite", "D-block & S-te-fan")
