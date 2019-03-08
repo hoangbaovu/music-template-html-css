@@ -52,3 +52,8 @@ mixin m-topic-item(imgid="love", topic="Topic name")
         img(src=`assets/images/topics/${imgid}.jpg`, alt='')
         .overlay.overlay-bg.overlay--no-opacity
           span=topic
+
+//- widget-singer
+mixin widget-singer(imgid="48", singer="Singer Name")
+  a.widget-singer__item(href='#', style=`background-image: url(./assets/images/singer/${imgid}.jpg)`)&attributes(attributes)
+    span=singer
