@@ -1,0 +1,20 @@
+.widget {
+  @extend .mb-3;
+}
+
+.widget-tagcloud {
+  &__link {
+    background: $gray-300;
+    color: $black;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    @extend .d-inline-flex;
+    @extend .rounded;
+    @include transition(all, 0.3s, ease-in-out);
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+}

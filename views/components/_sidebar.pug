@@ -1,0 +1,22 @@
+aside.sidebar
+  .widget
+    .m-header
+      h2.m-header__title
+        a(href="#") Thể loại phổ biến
+    .widget-tagcloud
+      a.widget-tagcloud__link(href='#') Acoustic
+      a.widget-tagcloud__link(href='#') Hip-Hop/Rap
+      a.widget-tagcloud__link(href='#') Pop
+      a.widget-tagcloud__link(href='#') R&B
+      a.widget-tagcloud__link(href='#') Classical
+  .widget
+    .m-header
+      h2.m-header__title
+        a(href="#") Bài hát nổi bật
+    .row
+      +song-widget("music", "99156", "Anh là ai", "Phương Ly")
+      +song-widget("music", "101029", "Forthenite", "D-block & S-te-fan")
+      +song-widget("music", "85553", "Done For Me", "Charlie Puth")
+      +song-widget("music", "26070", "Skyfall", "Adele")
+      +song-widget("music", "40321", "Victory", "Two Steps From Hell")
+
