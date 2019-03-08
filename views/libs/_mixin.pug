@@ -3,6 +3,8 @@ mixin header-title(name="Header Name", link="#")
   .m-header
     h2.m-header__title
       a(href=link)=name
+    if block
+      block
 
 //- Song
 //- mixin song(assets="music" ,imgid="99156", name="Song Name", singer="Singer Name")
