@@ -55,22 +55,36 @@ mixin song-widget(assets="music" ,imgid="99156", name="Song Name", singer="Singe
         a(href='#')=singer
 
 //- song-cover
-mixin song-cover(assets="album", imgid="101024", name="Song name", singer="Singer name")
+//- mixin song-cover(assets="album", imgid="101024", name="Song name", singer="Singer name")
+//-   .song-cover
+//-     a(href='#')
+//-       .song-cover__img
+//-         img(src=`assets/images/${assets}/${imgid}.jpg`, alt='')
+//-         .overlay
+//-           .overlay-play
+//-             i.far.fa-play-circle
+//-     .song-info
+//-       h4.song-info__title
+//-         a(href='#')=name
+//-       p.song-info__sub-title
+//-         a(href='#')=singer
+
+//- albums
+mixin song-cover(data)
   .song-cover
-    a(href='#')
+    a(href= data.link)
       .song-cover__img
-        img(src=`assets/images/${assets}/${imgid}.jpg`, alt='')
+        img(src=`assets/images/album/${data.imgid}.jpg`, alt=`${data.name}`)
         .overlay
           .overlay-play
             i.far.fa-play-circle
     .song-info
       h4.song-info__title
-        a(href='#')=name
+        a(href= data.link) #{data.name}
       p.song-info__sub-title
-        a(href='#')=singer
+        a(href= data.link) #{data.singer}
 
 //- topics
-
 mixin topics(data)
   .topics
     a(href= data.link)
