@@ -1,0 +1,182 @@
+extends ./layouts/layouts.pug
+
+block title
+  | Tận cùng của nổi nhớ - Will; Han Sara - Music
+
+block content
+  section.song-page
+    .song.song--no-hover.song--large
+      a(href='#')
+        .song__img
+          img(src='assets/images/music/93633.jpg', alt='')
+          .overlay
+            .overlay-play
+              i.far.fa-play-circle
+      .song-info.song-info--medium.song-info--song-page
+        h4.song-info__title
+          a(href='#') Tận Cùng Nỗi Nhớ (New Version)
+        p.song-info__sub-title
+          a(href='#') Will
+          a(href='#') Han Sara
+        p.song-info__album
+          | Album:
+          a(href='#') Tận Cùng Nỗi Nhớ (New Version) (Single)
+        p.song-info__authors
+          | Sáng tác:
+          a(href='#', title='Andiez') Andiez
+        p.song-info__category
+          | Thể loại:
+          a(href='#', title='Việt Nam') Việt Nam
+          a(href='#', title='Nhạc Trẻ') Nhạc Trẻ
+        .music-player
+          audio.music-player__audio(controls='', loop='')
+            source(src='./assets/audio/Tan Cung Noi Nho New Version_ - Will_ Ha.mp3', type='audio/mpeg')
+            | Your browser does not support the audio element.
+  section
+    .row
+      .col-sm-12
+        +header-title("Lời bài hát")
+        .song-lyrics
+          p.song-lyrics-text
+            | Anh chơi vơi, nơi góc phố quen mình từng,
+            br
+            | Từng là tất
+            |                     cả.
+            br
+            | Hôm ấy mây xanh ngát trời.
+            br
+            | Cố giữ lấy chút
+            |                     ấm áp từ tay em
+            br
+            | Nhưng biết sao được
+            br
+            | Hôm nay mình
+            |                     chia tay.
+            br
+            br
+            | Những tấm hình kỷ niệm của chúng mình
+            br
+            | Vẫn đây mà
+            br
+            | Vậy cớ sao anh vội xa?
+            br
+            | Những món quà cùng lời
+            |                     chúc, yêu em thiết tha…
+            br
+            | Chỉ mỗi em là nhớ anh của ngày
+            |                     hôm qua.
+            br
+            br
+            | Tận cùng của nỗi nhớ
+            br
+            | Anh có biết là gì ko?
+            br
+            br
+            | Là ngày dài cứ trôi
+            br
+            | Anh chỉ nghĩ về mình em
+            |                     thôi.
+            br
+            br
+            | Tận cùng của tan vỡ
+            br
+            | Anh có biết là gì không?
+            br
+            br
+            | Là ngày em vẫn trông rất xinh đẹp
+            br
+            | Hẹn anh ở nơi
+            |                     phố quen.
+            br
+            br
+            | Rồi chia tay.
+            br
+            br
+            | Nếu, anh được một lần ngược thời gian
+            br
+            | Thì chẳng
+            |                     ngại chi, anh sẽ về nơi lúc xưa
+            br
+            | Ở phố đông người, vội
+            |                     vàng quá,
+            br
+            | Ta vô tình chạm nhẹ vào nhau.
+            br
+            | Một
+            |                     thoáng mơ mộng
+            br
+            | Để anh ngỡ say một đời…
+            br
+            br
+            | Có căn phòng từng ngập tràn tiếng cười
+            br
+            | Mỗi đêm
+            |                     về,
+            br
+            | Chỉ có em với mỗi cơ đơn
+            br
+            | Em trách mình chẳng
+            |                     thể xóa đi hết tất cả…
+            br
+            | Muốn hỏi anh là
+            br
+            | Anh có
+            |                     còn yêu em?
+            br
+            br
+            | Tận cùng của nỗi nhớ
+            br
+            | Anh có biết là gì ko?
+            br
+            br
+            | Là ngày dài cứ trôi
+            br
+            | Anh chỉ nghĩ về mình em
+            |                     thôi.
+            br
+            br
+            | Tận cùng của tan vỡ
+            br
+            | Anh có biết là gì không?
+            br
+            br
+            | Là ngày em vẫn trông rất xinh đẹp
+            br
+            | Hẹn anh ở nơi
+            |                     phố quen
+            br
+            br
+            | Nếu chia tay là chuyện thời gian
+            br
+            | Cũng từng nói,
+            |                     mọi chuyện sẽ qua thôi mà
+            br
+            br
+            | Ai cũng phải bước tiếp…
+            br
+            br
+            | Trên đoạn đường mới có những yêu thương,
+            br
+            | Mà
+            |                     người nào khác sẽ mang đến cho mình.
+            br
+            br
+            | Anh - em, đã một thời ta xem nhau là tất cả.
+            br
+            | Bogosip-eunmam
+            br
+            | Neoneun algoiss-eulkka
+            br
+            br
+            | Haluga jinado ijhyeojijiga anh-a
+            br
+            br
+            | Silanghaneunmam
+            br
+            | Neoneun algoiss-eulkka
+            br
+            br
+            | Igsughan geu gilgeolieseo
+            br
+            | Seolo majubomyeo ,
+            |                     heeojinna

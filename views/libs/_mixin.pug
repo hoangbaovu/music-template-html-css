@@ -7,24 +7,6 @@ mixin header-title(name="Header Name", link="#")
       block
 
 //- Song
-//- mixin song(assets="music" ,imgid="99156", name="Song Name", singer="Singer Name")
-//-   .song
-//-     .song__img
-//-       a(href='song.html')
-//-         img(src=`./assets/images/${assets}/${imgid}.jpg`, alt='')
-//-     .song-info
-//-       h4.song-info__title
-//-         a(href='song.html')=name
-//-       p.song-info__sub-title
-//-         a(href='#')=singer
-//-     .song__more
-//-       a(href='/song.html')
-//-         i.far.fa-play-circle
-//-       a(href='#')
-//-         i.fas.fa-cloud-download-alt
-//-       a(href='#')
-//-         i.fas.fa-share-alt
-
 mixin song(data)
   .song
     .song__img
@@ -55,22 +37,21 @@ mixin song-widget(assets="music" ,imgid="99156", name="Song Name", singer="Singe
         a(href='#')=singer
 
 //- song-cover
-mixin song-cover(assets="album", imgid="101024", name="Song name", singer="Singer name")
+mixin song-cover(data)
   .song-cover
-    a(href='#')
+    a(href= data.link)
       .song-cover__img
-        img(src=`assets/images/${assets}/${imgid}.jpg`, alt='')
+        img(src=`assets/images/album/${data.imgid}.jpg`, alt=`${data.name}`)
         .overlay
           .overlay-play
             i.far.fa-play-circle
     .song-info
       h4.song-info__title
-        a(href='#')=name
+        a(href= data.link) #{data.name}
       p.song-info__sub-title
-        a(href='#')=singer
+        a(href= data.link) #{data.singer}
 
 //- topics
-
 mixin topics(data)
   .topics
     a(href= data.link)
