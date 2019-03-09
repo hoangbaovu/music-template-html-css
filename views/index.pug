@@ -30,19 +30,9 @@ block content
           i.far.fa-play-circle
           | Xem thêm
     .row
-
       //- Iteration albums
       each data in albums
         +song-cover(data)
-
-      //- +song-cover("album", "101024", "The Growing Leaf", "Mons Lvnae")
-      //- +song-cover("album", "101025", "In The End (Single)", "Tommee Profitt")
-      //- +song-cover("album", "101034", "(Reverse) (2019)", "Hồ Mộng Châu (胡梦周)")
-      //- +song-cover("album", "100959", "Thói Quen (习惯) (2019)", "Hạ Uyển An(夏婉安)")
-      //- +song-cover("album", "101024", "The Growing Leaf", "Mons Lvnae")
-      //- +song-cover("album", "100959", "Thói Quen (习惯) (2019)", "Hạ Uyển An(夏婉安)")
-      //- +song-cover("album", "101024", "The Growing Leaf", "Mons Lvnae")
-      //- +song-cover("album", "101025", "In The End (Single)", "Tommee Profitt")
   section.m-topic
     +header-title("Chủ đề nổi bật")
       .m-header__viewmore
@@ -53,6 +43,7 @@ block content
       //- Iteration topics
       //- each data in topics
       //-   +topics(data)
-      - for (var i = 0; i < topics.length; i++) {
+      - const length = topics.length;
+      - for (var i = 0; i < length; i++) {
           +topics(topics[i])
       - }
