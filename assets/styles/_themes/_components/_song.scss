@@ -4,9 +4,13 @@
   padding: 0 0 0 15px;
 
   %song-info {
-    color: $gray-200;
+    color: $gray-500;
     font-size: 0.8em;
     margin-bottom: 5px;
+
+    a {
+      margin-left: 5px;
+    }
   }
 
   &__album {
@@ -29,6 +33,10 @@
   &__sub-title {
     font-size: 0.8em;
     margin: 0;
+
+    a {
+      margin-right: 5px;
+    }
   }
 }
 
@@ -119,6 +127,11 @@
     .song__more {
       display: block;
     }
+
+    .overlay,
+    .overlay-play {
+      opacity: 1;
+    }
   }
 
   &--widget {
@@ -133,6 +146,7 @@
   &--no-hover {
     &:hover {
       box-shadow: none;
+      background: none;
     }
   }
 }

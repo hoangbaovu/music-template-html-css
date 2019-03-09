@@ -1,0 +1,32 @@
+.song-page {
+  .song {
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  .song__img {
+    padding: 0;
+
+    img {
+      height: 260px;
+      width: 260px;
+    }
+  }
+
+  .song-info {
+    padding-top: 15px;
+  }
+
+  .song-info__sub-title {
+    margin-bottom: 20px;
+  }
+
+  .music-player {
+    margin-top: auto;
+
+    &__audio {
+      width: 100%;
+    }
+  }
+}

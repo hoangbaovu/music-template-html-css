@@ -28,6 +28,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: path.join(__dirname, "views", "index.pug")
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "song.html",
+      template: path.join(__dirname, "views", "song.pug")
     })
   ],
   module: {
