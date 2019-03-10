@@ -1,3 +1,13 @@
+//- navbar_menu
+mixin navbar_menu(data)
+  if (selected === data.id)
+    li.nav-item.active
+      a.nav-link(href= data.link) #{data.name}
+        span.sr-only (current)
+  else
+    li.nav-item
+      a.nav-link(href= data.link) #{data.name}
+
 //- header-title
 mixin header-title(name="Header Name", link="#")
   .m-header
