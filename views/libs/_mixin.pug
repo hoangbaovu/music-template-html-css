@@ -67,7 +67,7 @@ mixin song-large(data)
       p.song-info__category
         | Thể loại:
         each category in data.category
-          a(href='#', title='Việt Nam')= category
+          a(href='#', title= category)= category
 
 mixin song-widget(assets="music" ,imgid="99156", name="Song Name", singer="Singer Name")
   .song(class!=attributes.class).song--widget.song--no-hover
@@ -77,7 +77,7 @@ mixin song-widget(assets="music" ,imgid="99156", name="Song Name", singer="Singe
     .song-info
       h4.song-info__title
         a(href='song.html')=name
-      p.song-info__sub-title
+      p.song-info__singer
         a(href='#')=singer
 
 //- song-cover
@@ -92,7 +92,7 @@ mixin song-cover(data)
     .song-info
       h4.song-info__title
         a(href= data.link) #{data.name}
-      p.song-info__sub-title
+      p.song-info__singer
         a(href= data.link) #{data.singer}
 
 //- topics
