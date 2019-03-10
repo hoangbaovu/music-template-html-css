@@ -30,9 +30,9 @@
     margin-bottom: 10px;
   }
 
-  &__sub-title {
+  &__singer {
     font-size: 0.8em;
-    margin: 0;
+    margin: 0 0 10px;
 
     a {
       margin-right: 5px;
@@ -93,7 +93,7 @@
   }
 
   &__img {
-    padding: 7px 0 7px 7px;
+    margin: 7px 0 7px 7px;
     position: relative;
     overflow: hidden;
 
@@ -105,7 +105,8 @@
   }
 
   &__more {
-    margin-left: auto;
+    position: absolute;
+    right: 10px;
     display: none;
     @include transition(all, 0.3s, ease-in-out);
 

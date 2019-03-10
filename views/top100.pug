@@ -1,0 +1,17 @@
+extends ./layouts/layouts.pug
+
+block link
+  -var selected = 'top100';
+
+block title
+  | Tận cùng của nổi nhớ - Will; Han Sara - Music
+
+block content
+  section.top100-page
+    +header-title("Top 100")
+    .row
+      .col-md-12
+        //- Iteration song
+        - for (var i = 0; i < songs.length; i++) {
+            +song-large(songs[i])
+        - }

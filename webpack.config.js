@@ -33,6 +33,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "song.html",
       template: path.join(__dirname, "views", "song.pug")
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "top100.html",
+      template: path.join(__dirname, "views", "top100.pug")
     })
   ],
   module: {
