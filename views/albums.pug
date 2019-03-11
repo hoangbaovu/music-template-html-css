@@ -1,0 +1,17 @@
+extends ./layouts/layouts.pug
+
+block link
+  -var selected = 'albums';
+
+block title
+  | Albums - Music
+
+block content
+  section.topics-page
+    +header-title("Nhạc Theo Album")
+    .row
+      //- Iteration topics
+      each data in albums
+        +song-cover(data).col-md-4
+      .col-md-12
+        +pagination()
