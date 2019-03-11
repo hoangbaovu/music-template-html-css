@@ -40,45 +40,28 @@
   }
 }
 
-.song-info--medium {
-  &__title {
-    font-size: 2em;
-  }
-
-  &__sub-title {
-    font-size: 1em;
-  }
-}
-
 .song-info__album a,
 .song-info__authors a,
 .song-info__category a {
-  color: #5c4e4e;
-}
+  color: rgba(black, 0.5);
 
-.song-info__album a:hover,
-.song-info__authors a:hover,
-.song-info__category a:hover {
-  color: #65509e;
-}
-
-.song-info--song-page {
-  display: flex;
-  flex-direction: column;
+  @include hover() {
+    color: $primary;
+  }
 }
 
 .song {
-  align-items: center;
   margin: 0.5rem 0;
   @extend .d-flex;
   @extend .rounded;
+  @extend .align-items-center;
   @include transition(all, 0.3s, ease-in-out);
 
   &__count {
-    position: relative;
-    width: 50px;
     @extend .d-flex;
-    align-items: center;
+    @extend .align-items-center;
+    @extend .position-relative;
+    @include size(50px, auto);
 
     span {
       position: absolute;
@@ -94,20 +77,19 @@
 
   &__img {
     margin: 7px 0 7px 7px;
-    position: relative;
     overflow: hidden;
+    @extend .position-relative;
 
     img {
-      height: 64px;
-      width: 64px;
       @extend .rounded;
+      @include size(64px);
     }
   }
 
   &__more {
-    position: absolute;
     right: 10px;
     display: none;
+    @extend .position-absolute;
     @include transition(all, 0.3s, ease-in-out);
 
     a {
@@ -119,19 +101,18 @@
     }
   }
 
-  &:hover {
+  @include hover {
     background: $gray-100;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: $box-shadow;
     @include transition(all, 0.3s, ease-in-out);
 
     .song__more {
-      display: block;
+      @extend .d-block;
     }
 
     .overlay,
     .overlay-play {
-      opacity: 1;
+      @include opacity(1);
     }
   }
 
@@ -145,7 +126,7 @@
   }
 
   &--no-hover {
-    &:hover {
+    @include hover {
       box-shadow: none;
       background: none;
     }
@@ -153,9 +134,8 @@
 }
 
 .song--large .song__img img {
-  height: 164px;
-  width: 164px;
   @extend .rounded;
+  @include size(164px);
 }
 
 .song--large .song-info__title {
@@ -169,17 +149,17 @@
   font-size: 12px;
   left: -5px;
   top: 27px;
-  position: absolute;
+  @extend .position-absolute;
 }
 
 .song:nth-child(1) .song__count span::before {
-  color: rgb(233, 15, 15);
+  color: $red;
 }
 
 .song:nth-child(2) .song__count span::before {
-  color: rgb(14, 233, 61);
+  color: $green;
 }
 
 .song:nth-child(3) .song__count span::before {
-  color: rgb(40, 18, 238);
+  color: $blue;
 }

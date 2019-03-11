@@ -5,12 +5,17 @@
 //Libs
 
 @import "_bootstrap/bootstrap";
+@import "_themes/_variables";
 
-@import "_mixin/transition";
+// Mixin
 
-@import "_themes/variables";
+@import "_mixin/_opacity";
+@import "_mixin/_transition";
 
+// Themes
 @import "_themes/themes";
+
+// Components
 
 @import "_themes/_components/navbar";
 @import "_themes/_components/jumbotron";
@@ -22,5 +27,8 @@
 
 @import "_themes/_components/widget";
 
+// Page
+
+@import "_themes/_pages/home-page";
 @import "_themes/_pages/song-page";
 @import "_themes/_pages/top100-page";
