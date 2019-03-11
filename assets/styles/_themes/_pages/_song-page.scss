@@ -9,7 +9,17 @@
     padding: 0;
 
     img {
-      @include size(260px, 260px);
+      @include size(260px);
+
+      @include media-breakpoint-down(md) {
+        @include size(136px);
+      }
+    }
+  }
+
+  .song__title {
+    @include media-breakpoint-down(md) {
+      font-size: $h5-font-size;
     }
   }
 
@@ -17,7 +27,7 @@
     padding-top: 15px;
   }
 
-  .song-info__sub-title {
+  .song-info__singer {
     margin-bottom: 20px;
   }
 

@@ -53,25 +53,32 @@
 
 .song {
   margin: 0.5rem 0;
+  overflow: hidden;
   @extend .d-flex;
   @extend .rounded;
   @extend .align-items-center;
+  @extend .position-relative;
   @include transition(all, 0.3s, ease-in-out);
 
   &__count {
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .position-relative;
-    @include size(50px, auto);
+    background: $white;
+    content: "";
+    bottom: -10px;
+    left: -10px;
+    z-index: 3;
+    @extend .rounded-circle;
+    @extend .position-absolute;
+    @include size(50px);
 
     span {
-      left: 15px;
+      left: 20px;
+      bottom: 20px;
       @extend .position-absolute;
 
       &::before {
         counter-increment: section;
         content: counter(section);
-        font: $font-weight-bold $font-size-base/$line-height-base
+        font: $font-weight-bold $h4-font-size/$line-height-base
           $font-family-sans-serif;
       }
     }
@@ -138,20 +145,18 @@
 .song--large .song__img img {
   @extend .rounded;
   @include size(164px);
+
+  @include media-breakpoint-down(md) {
+    @include size(96px);
+  }
 }
 
 .song--large .song-info__title {
-  font-size: 2em;
-}
+  font-size: 1.4em;
 
-.song:nth-child(1) .song__count span::after,
-.song:nth-child(2) .song__count span::after,
-.song:nth-child(3) .song__count span::after {
-  content: "TOP";
-  font-size: 12px;
-  left: -5px;
-  top: 27px;
-  @extend .position-absolute;
+  @include media-breakpoint-down(md) {
+    font-size: $font-size-base;
+  }
 }
 
 .song:nth-child(1) .song__count span::before {

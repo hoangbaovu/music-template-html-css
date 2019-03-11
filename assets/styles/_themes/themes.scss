@@ -12,6 +12,14 @@ img:hover {
 .m-header {
   @extend .d-flex;
 
+  &__title {
+    font-size: $h2-font-size;
+
+    @include media-breakpoint-down(md) {
+      font-size: $h4-font-size;
+    }
+  }
+
   &__viewmore {
     @extend .ml-auto;
 
