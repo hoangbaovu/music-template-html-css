@@ -97,7 +97,7 @@ mixin song-cover(data)
 
 //- topics
 mixin topics(data)
-  .topics
+  .topics(class!=attributes.class)
     a(href= data.link)
       .topics__img
         img(src=`assets/images/topics/${data.imgid}.jpg`, alt='')

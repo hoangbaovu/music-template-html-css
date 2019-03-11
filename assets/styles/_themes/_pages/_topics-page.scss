@@ -1,0 +1,21 @@
+.topics-page {
+  .topics {
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+
+    &__img img {
+      @include media-breakpoint-up(md) {
+        height: 220px;
+      }
+    }
+
+    .overlay span {
+      font-size: $h3-font-size;
+
+      @include media-breakpoint-up(md) {
+        font-size: $h4-font-size;
+      }
+    }
+  }
+}

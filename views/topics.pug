@@ -1,0 +1,30 @@
+extends ./layouts/layouts.pug
+
+block link
+  -var selected = 'topics';
+
+block title
+  | Chủ đề Nhạc - Music
+
+block content
+  section.topics-page
+    +header-title("Nhạc Theo Chủ Đề")
+    .row
+      //- Iteration topics
+      each data in topics
+        +topics(data)
+      .col-md-12
+        nav(aria-label='...')
+          ul.pagination
+            li.page-item.disabled
+              span.page-link Previous
+            li.page-item.active
+              a.page-link(href='#') 1
+            li.page-item(aria-current='page')
+              span.page-link
+                | 2
+                span.sr-only (current)
+            li.page-item
+              a.page-link(href='#') 3
+            li.page-item
+              a.page-link(href='#') Next
