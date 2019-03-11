@@ -3,6 +3,10 @@
   color: $black;
   padding: 20px 0;
 
+  &__logo {
+    font-size: $h2-font-size;
+  }
+
   &__copyright {
     margin: 20px 0;
   }

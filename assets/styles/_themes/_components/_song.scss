@@ -26,7 +26,8 @@
   }
 
   &__title {
-    font: 700 1em/1 "Roboto";
+    font: $font-weight-bold $h4-font-size/$line-height-base
+      $font-family-sans-serif;
     margin-bottom: 10px;
   }
 
@@ -64,13 +65,14 @@
     @include size(50px, auto);
 
     span {
-      position: absolute;
       left: 15px;
+      @extend .position-absolute;
 
       &::before {
         counter-increment: section;
         content: counter(section);
-        font: 600 1.2em/1.5 Roboto;
+        font: $font-weight-bold $font-size-base/$line-height-base
+          $font-family-sans-serif;
       }
     }
   }
@@ -97,7 +99,7 @@
     }
 
     i {
-      font-size: 1.3em;
+      font-size: $h4-font-size;
     }
   }
 
