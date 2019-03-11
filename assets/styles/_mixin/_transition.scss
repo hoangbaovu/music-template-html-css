@@ -1,4 +1,4 @@
-/* @include transition(all,2s,ease-out); */
+// @include transition(all, 0.3s,ease-out);
 @mixin transition($property: all, $delay: 0.3s, $timing: ease-in-out) {
   -webkit-transition: $property $delay $timing;
   -moz-transition: $property $delay $timing;

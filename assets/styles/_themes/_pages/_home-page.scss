@@ -1,0 +1,40 @@
+// index
+
+// news-song
+
+.news-song {
+  &__left,
+  &__right {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+  }
+}
+
+// news-album
+
+.news-album {
+  .song-cover {
+    padding: 10px;
+
+    @include make-col-ready();
+
+    @include media-breakpoint-up(xs) {
+      @include make-col(6);
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(4);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+  }
+}
